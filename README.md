@@ -6,3 +6,6 @@ Three types of devices will be in the database: Laptops, Servers, Thin Clients
 Users will need to login or create a login to use the API.
 
 Some features on the api can only be used by Admins.
+
+For testing purposes - To test for admin, email is raam@raam.com and password is Testing1
+                       To test for user, email is tyler@tyler.com and password is Testing2
