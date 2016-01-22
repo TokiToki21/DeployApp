@@ -1,2 +1,8 @@
 # DeployApp
-An app that attaches a naming convention and deploys HP devices to a designated location.
+A Python API that will search through a sqlite3 database that has information of certain devices. 
+
+Three types of devices will be in the database: Laptops, Servers, Thin Clients
+
+Users will need to login or create a login to use the API.
+
+Some features on the api can only be used by Admins.
