@@ -1,0 +1,46 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<h1>Results</h1>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">            
+            {% if rRows %}
+            <tr>
+                <th>Location</th>
+                <th>Type</th>
+                <th>Model</th>
+                <th>Tag</th>
+            </tr>
+            <!-- Populates table with Device data-->
+                {% for Loc, Type, Mod, Tag in rRows %}
+                <tr>
+                    <td>{{Loc}}</td>
+                    <td>{{Mod}}</td>
+                    <td>{{Type}}</td>
+                    <td>{{Tag}}</td>
+                </tr>
+               {% endfor %}
+            <!-- Populates table with Server data-->
+            {% elif sRows %}
+            <tr>
+                <th>Mode</th>
+                <th>Type</th>
+                <th>Module</th>
+                <th>Location</th>
+                <th>Server Number</th>
+            </tr>
+                {% for Mode,Type, Module, Location, sNum in sRows %}
+                <tr>
+                    <td>{{Mode}}</td>
+                    <td>{{Type}}</td>
+                    <td>{{Module}}</td>
+                    <td>{{Location}}</td>
+                    <td>{{sNum}}</td>
+                </tr>
+                {% endfor %}
+            {% endif %}            
+        </table>
+    </div>
+</div>
+
+{% endblock %}

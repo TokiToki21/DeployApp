@@ -1,0 +1,46 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<!--
+    personal computers will have 4 columns
+    servers will have 4 columns
+-->
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<!--form for personal computer-->
+<h3>Devices</h3>
+<form class="form-inline" role="form" method="post">
+    <div class="form-group">
+        <label for="Location">Location</label>
+        <select class="form-control" name="ltLOC">
+            {% for location in loca %}
+                <option value="{{location}}">{{location}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Type">Type</label>
+        <select class="form-control" name="ltType">
+            {% for type in types %}
+                <option value="{{type}}">{{type}}</option>
+            {% endfor %}           
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Model">Model</label>
+        <select class="form-control" name="ltModel">
+            {% for model in models %}
+            <option value="{{model}}">{{model}}</option>
+            {% endfor %}           
+        </select>        
+    </div>
+    <div class="form-group">
+        <label for="Asset Tag">Asset Tag</label>
+        <input type="text" class="form-control" name="assTag" placeholder="Enter 0001-9999" />
+    </div>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+    <div class="jumbotron text-center" style="margin-top:10%; padding:10%">
+        You successfully signed up!
+        Now login to access to our features!
+        <p><a href="{{ url_for('login') }}" class="btn btn-primary btn-large">Login&raquo;</a></p>
+    </div>
+{% endblock content %}

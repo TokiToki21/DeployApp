@@ -1,0 +1,58 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<!--
+    servers will have 4 columns
+-->
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<!--form for Servers-->
+<h3>Servers</h3>
+<form class="form-inline" role="form" method="post">
+    <div class="form-group">
+        <label for="Mode">Mode</label>
+        <select class="form-control" name="servMode">
+            {% for mode in sMode %}
+            <option value="{{mode}}">{{mode}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Models">Models</label>
+        <select class="form-control" name="servModel">
+            {% for model in sModel %}
+            <option value="{{model}}">{{model}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Location">Location</label>
+        <select class="form-control" name="servLoc">
+            {% for sLoc in sLoca %}
+            <option value="{{sLoc}}">{{sLoc}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Module">Module</label>
+        <select class="form-control" name="servModule">
+            {% for module in sModule %}
+            <option value="{{module}}">{{module}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Server Number">Server Number</label>
+        <input type="text" required class="form-control" name="servNum" placeholder="Enter 00 - 99" />
+    </div>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+
+{% endblock %}

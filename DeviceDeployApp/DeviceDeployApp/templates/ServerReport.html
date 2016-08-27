@@ -1,0 +1,32 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<form class="form-inline" role="form" method="post">
+
+    <div class="form-group">
+        <label for="Location">Mode</label>
+        <input type="text" required class="form-control" name="sMode" placeholder="Enter Mode" />
+    </div>
+
+    <div class="form-group">
+        <label for="Type">Type</label>
+        <input type="text" required class="form-control" name="sType" placeholder="Enter Server Type" />
+    </div>
+
+    <div class="form-group">
+        <label for="Model">Module</label>
+        <input type="text" required class="form-control" name="sMod" placeholder="Enter Module" />
+    </div>
+    <div class="form-group">
+        <label for="Model">Location</label>
+        <input type="text" required class="form-control" name="sLoc" placeholder="Enter Location" />
+    </div>
+    <p></p>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron text-center" style="margin-top:10%; padding:10%">
+    {% if 'email' in session %}
+    <h1>Welcome</h1>
+    <p class="lead">You can look up any devices or servers located in the navigation bar up above</p>
+    {% else %}
+    <h1>Welcome</h1>
+    <p class="lead">Please login to look up devices or request reports</p>
+    <p><a href="{{ url_for('login') }}" class="btn btn-primary btn-large">Login &raquo;</a></p>
+    <p><a href="{{ url_for('signUp') }}"> Don't have an account?</a></p>
+    {% endif %}
+</div>
+
+{% endblock %}

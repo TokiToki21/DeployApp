@@ -1,0 +1,35 @@
+﻿
+{% extends "layout.html" %}
+
+{% block content %}
+<div>
+    <form method="post" action="{{url_for('login', next = next)}}" role="form">
+
+        <div class="form-group">
+            <label for="email">
+                Username:
+            </label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="ex. testing@gmail.com" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required="required" />
+        </div>
+        <div class="form-group">
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+        </div>
+        <p></p>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <p><a href="{{ url_for('signUp') }}"> Don't have an account?</a></p>
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th>Location</th>
+                <th>Device Type</th>
+                <th>Model</th>
+                <th>Asset Tag</th>
+            </tr>
+
+            <!-- Populates table with data from our 4 lists-->
+            {% for l, t, m, a in Table_data %}
+            <tr>
+                <td>{{l}}</td>
+                <td>{{t}}</td>
+                <td>{{m}}</td>
+                <td>{{a}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}
