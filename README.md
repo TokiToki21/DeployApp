@@ -1,5 +1,5 @@
 # DeployApp
-A Python API that will search through a sqlite3 database that has information of certain devices. 
+A Python based GUI that will search through a sqlite3 database that has information of certain devices. 
 
 Three types of devices will be in the database: Laptops, Servers, Thin Clients
 
