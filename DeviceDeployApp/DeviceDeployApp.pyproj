@@ -18,8 +18,8 @@
     <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
     <Name>DeviceDeployApp</Name>
     <RootNamespace>DeviceDeployApp</RootNamespace>
-    <InterpreterId>{53fb24e5-6b9d-4b03-9437-e05ab1def574}</InterpreterId>
-    <InterpreterVersion>3.4</InterpreterVersion>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,17 +106,7 @@
     <Content Include="DeviceDeployApp\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env\">
-      <Id>{53fb24e5-6b9d-4b03-9437-e05ab1def574}</Id>
-      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
-      <Version>3.4</Version>
-      <Description>env (Python 64-bit 3.4)</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <LibraryPath>Lib\</LibraryPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>Amd64</Architecture>
-    </Interpreter>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\3.5" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
