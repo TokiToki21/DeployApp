@@ -1,5 +1,5 @@
 # DeployApp
-A Python based web API that will search through a sqlite3 database that has information on various devices. 
+A Python based web interface that will search through a sqlite3 database and present data on various devices. 
 
 Three types of devices are stored in the database: Laptops, Servers, Thin Clients
 
